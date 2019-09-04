@@ -1,0 +1,51 @@
+.participants
+	background-color: $bg-color-gray
+	overflow-y: auto
+	&::-webkit-scrollbar
+		width: 0
+	-ms-overflow-style: none
+	overflow: -moz-scrollbars-none
+	padding-top: 50px
+	h2
+		color: $text-gray
+		text-align: left
+		padding-left: 1.6em
+		margin-left: 0
+		position: fixed
+		display: inline-block
+		width: 330px
+		height: 60px
+		top: -20px
+		padding-top: 0.8em
+		background-color: $bg-color-gray
+		z-index: 1
+	&__name
+		text-decoration: none
+		color: $text-gray
+		display: flex
+		.name
+			align-self: center
+			margin-left: 0.5em
+			transition: .2s
+			white-space: nowrap
+			text-overflow: ellipsis
+			overflow: hidden
+			padding-right: 0.5em
+			&:hover
+				font-size: 1.03em
+			&:active
+				font-size: 1.02em
+.hidden-menu
+	list-style: none
+	margin: 0
+	li
+		padding: 0.5em 0
+		font-size: 1.2em
+		position: relative
+
+
+.icon-close
+	cursor: pointer
+	position: absolute
+	top: 0.9em
+	left: 9.5em

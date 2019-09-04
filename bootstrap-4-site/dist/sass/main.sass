@@ -1,0 +1,205 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+*
+	//outline: 1px solid red
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.navbar-brand
+	font-size: 42px
+	line-height: 0
+	.fa-quote-left
+		background-color: $accent
+		color: #fff
+		border-radius: 50%
+		font-size: 30px
+		width: 50px
+		height: 50px
+		display: inline-block
+		text-align: center
+		padding-top: 10px
+		margin-right: 10px
+
+.nav-item
+	font-size: 20px
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		border-bottom: 3px solid transparent
+		left: 50%
+		width: 0
+		bottom: -13px
+		transition: .5s all ease
+	&:before
+		content: ""
+		position: absolute
+		border-bottom: 3px solid transparent
+		right: 50%
+		bottom: -13px
+		width: 0
+		transition: .5s all ease
+	&:hover:after
+		border-bottom: 3px solid $accent
+		width: 50%
+	&:hover:before
+		border-bottom: 3px solid $accent
+		width: 50%
+
+
+.carousel-bg
+	background-image: url("../img/carousel-bg.jpg")
+	background-size: cover
+	background-position: center
+	height: auto
+	padding-top: 50px
+	padding-bottom: 50px
+
+.carousel-text
+	color: #fff
+	font-family: "Segoe WP-Light", sans-serif
+	h1
+		font-size: 42px
+		line-height: 44px
+	p 
+		font-size: 26px
+		line-height: 44px
+	.btn-primary
+		border-radius: 0
+		margin-left: 15px
+		.fa-check-circle
+			margin-right: 10px
+
+.advantages
+	padding: 50px 0
+	.advantages__item
+		text-align-last: center
+		.fa
+			border-radius: 50%
+			background-color: $accent
+			color: #fff
+			width: 180px
+			height: 180px
+			margin-bottom: 15px
+			font-size: 65px
+			line-height: 180px
+			&-desktop
+				background-color: #d94748
+			&-plane
+				background-color: #ebbb11
+		h3
+			color: $accent
+		p
+		color: #909090
+.shopping
+	color: #6f7173
+	padding: 50px 0
+	h1
+		margin-bottom: 50px
+	p
+		color: #909090
+		font-size: 15px
+		line-height: 20px
+
+.footer
+	border-top: 1px solid #b7b7b7
+	height: 90px
+	font-size: 15px
+	color: #909090
+	a
+		color: #909090
+	.copyright
+		padding-top: 30px
+
+.responsive-img
+	width: 100%
+
+.gallery-item
+	position: relative
+	display: block
+	&-content
+		position: absolute
+		background-color: rgba(#fff, .7)
+		text-align: center
+		font-size: 30px
+		width: 100%
+		height: auto
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		padding-top: 25%
+		opacity: 0
+		transform: scale(.5)
+		transition: .5s all ease
+		&:hover
+			opacity: 1
+			transform: scale(1)
+
+.hidden
+	display: none
+.modal-dialog
+	img
+		min-width: 90%
+		border-radius: 5px
+
+.modal-header
+	display: block
+	.close
+		padding: 0 10px 10px 0
+		margin-bottom: 0
+
+
+
+@import "media" // Всегда в конце
